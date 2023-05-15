@@ -4,6 +4,7 @@ public class Main {
         Store geant = new Store();
         POS pos = new POS(geant);
         LoadAll(geant, 30);
+        System.out.println(geant.ShowProducts());
     }
 
     /**
@@ -22,7 +23,7 @@ public class Main {
                     );
             for(int ln = 1; ln <= n+1; ln++){
                 String[] line = prodsArr[ln].split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
-                String[] stockL = stockArr[ln].split(" ");
+                String[] stockL = stockArr[ln].split("\t");
                 store.AddProduct(line[1], Float.parseFloat(line[2]), line[0]);
                 store.AddStock(stockL[0], Integer.parseInt(stockL[1]));
             }

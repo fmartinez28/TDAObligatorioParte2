@@ -1,0 +1,33 @@
+Importante:
+*En el directorio "test" se encuentran los tests unitarios de los casos pertinentes a la Parte 1, 2 y 3 de
+la tarea obligatoria.
+*La mayoría de los métodos de clase en este TDA se encuentran documentados, ante alguna duda revisar la documentación
+de los mismos.
+
+Guía:
+
+Supermercado:
+
+Primero que nada, es necesario instanciar las clase Store.
+
+Para añadir un producto, utilizamos el método AddProduct de Store, por método Creator se pasarán los parámetros
+que conciernen al constructor de un objeto Producto.
+
+Para remover un producto, utilizaremos el método RemoveProduct, pasando como parámetro su código de barras.
+
+Para conocer qué productos tenemos en nuestro inventario, de forma ordenada, invocamos el método ShowProducts.
+
+En caso de querer importar el inventario de otra instancia de Store a nuestro Store principal, utilizamos el
+método ImportInventory.
+
+POS:
+
+De igual forma que con Store, debemos instanciar POS, en este caso debemos pasar una instancia de Store como parámetro
+a nuestro objeto POS.
+
+Para añadir un producto a nuestro carro, utilizamos el método AddToCart, el cual toma como parámetro el código de barra
+y la cantidad que queremos reservar, en caso de que la cantidad sea mayor al stock disponible, no se efectuará la
+transacción.
+
+Para efectuar la compra, utilizamos el método Buy, este método afectará directamente al stock de los productos que
+tengamos en el carro, y nos retornará el valor del ticket generado en la compra.
