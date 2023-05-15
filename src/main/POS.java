@@ -1,4 +1,4 @@
-import java.util.PriorityQueue;
+package main;
 
 public class POS {
     private Cola<String> checkoutLine;

@@ -1,3 +1,4 @@
+package main;
 public class Store {
     private Lista<Producto> inventory;
     public Store(){
@@ -90,7 +91,7 @@ public class Store {
             if (temp != null){
                 temp.val.setStock(temp.val.GetStock() + diffStoreHead.val.GetStock());
             } else {
-                this.inventory.Push(diffStoreHead.val);
+                this.AddProduct(diffStoreHead.val);
             }
             diffStoreHead = diffStoreHead.next;
         }
@@ -149,7 +150,7 @@ public class Store {
         StringBuilder prods = new StringBuilder();
         Node<Producto> looper = inventory.GetFirst();
         while (looper != null){
-            prods.append("%s, %s, %s, %s\n".formatted(looper.val.GetName(), looper.val.GetCode(), looper.val.GetStock(), looper.val.GetPrice()));
+            prods.append("Nombre: %s, Código: %s, Stock: %s, Precio: $%s\n".formatted(looper.val.GetName(), looper.val.GetCode(), looper.val.GetStock(), looper.val.GetPrice()));
             looper = looper.next;
         }
         return prods.toString();
